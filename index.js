@@ -10,11 +10,20 @@ const UserController = require('./app/controllers/UserController');
 
 /* Routes */
 app.get('/', function(req, res){
-    res.render('index');
+    res.render('list-questions');
 });
 
+app.get('/question', function(req, res){
+   res.render('create-question');
+});
+
+app.get('/question/:id', function(req, res){
+    res.render('question');
+ });
+
+/* Register User */
 app.get('/user/create', function(req, res){
-    res.render('create-user');
+    res.render('auth/register');
 });
 
 app.post('/user/create', function(req, res){
@@ -22,6 +31,15 @@ app.post('/user/create', function(req, res){
     user.create();
 
     res.redirect('/user/create');
+});
+
+/* Login */
+app.get('/user/login', function(req, res){
+    res.render('auth/login');
+});
+
+app.post('/user/login', function(req, res){
+
 });
 
 app.listen(80);

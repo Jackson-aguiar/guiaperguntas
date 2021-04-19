@@ -1,10 +1,7 @@
 <%- include('layouts/header') %>
-    <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="/">Perguntas</a>
-    </nav>
-    <div class="container">
-        <div class="card m-5">
-            <div class="card-header lead">
+    <div class="container py-3 my-3 col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-light lead">
                 Fazer Pergunta
             </div>
             <div class="card-body">
@@ -15,7 +12,7 @@
                     </div>
                     <div class="form-group">
                         <label>Descrição</label>
-                        <input type="text" class="form-control" name="description">
+                        <textarea type="text" class="form-control" name="description"></textarea>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-success">Perguntar</button>

@@ -1,0 +1,28 @@
+<%- include('layouts/header') %>
+
+<div class="d-flex justify-content-center my-5 py-5">
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-header lead">
+                Criar Cadastro
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/user/create">
+                    <label>Nome</label>
+                    <input type="text" name="name" class="form-control">
+            
+                    <label>Email</label>
+                    <input type="text" name="email" class="form-control">
+            
+                    <label>Senha</label>
+                    <input type="text" name="password" class="form-control">
+            
+                    <div class="text-center m-3">
+                        <button class="btn btn-success">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('layouts/footer') %>
